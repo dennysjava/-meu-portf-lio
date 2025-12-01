@@ -1,4 +1,6 @@
-
+/* ===========================
+   VARIÁVEIS E CONFIGURAÇÃO GERAL
+=========================== */
 :root {
   --primary: #6c4af2;
   --primary-light: #8f6af7;
@@ -15,7 +17,7 @@
   --shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
 }
 
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -32,22 +34,22 @@ body {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-
+/* animação fade-in */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-
+/* ===========================
    CABEÇALHO
-
+=========================== */
 header {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* tudo em linha */
+  justify-content: space-between; /* título à esquerda, menu à direita */
   align-items: center;
   padding: 1rem 2rem;
   margin-bottom: 3rem;
-  border-radius: 20px;
+  border-radius: 20px; /* borda arredondada */
   background: var(--white);
   border: 2px solid var(--border);
   box-shadow: var(--shadow);
@@ -64,16 +66,21 @@ header h1 {
   font-weight: 700;
 }
 
+/* Nav em linha e com espaçamento */
+nav {
+  display: flex; /* links em linha */
+  gap: 1.7rem; /* espaço entre links */
+}
+
 nav a {
-  margin-left: 1.7rem;
   text-decoration: none;
   font-weight: 600;
   color: var(--text-light);
-  transition: 0.3s ease;
   position: relative;
+  transition: 0.3s ease;
 }
 
-
+/* underline animado */
 nav a::after {
   content: "";
   position: absolute;
@@ -83,7 +90,7 @@ nav a::after {
   height: 3px;
   background: var(--primary);
   border-radius: 2px;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
@@ -94,7 +101,9 @@ nav a:hover::after {
   width: 100%;
 }
 
-
+/* ===========================
+   INTRO
+=========================== */
 main {
   display: flex;
   justify-content: space-between;
