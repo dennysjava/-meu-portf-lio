@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Dennys DEV</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #6c4af2;
+      --primary-light: #8f6af7;
+      --primary-dark: #5336c9;
+      --bg: #f7f5ff;
+      --white: #ffffff;
+      --text: #222;
+      --text-light: #666;
+      --border: #e5e1ff;
+      --shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      margin-bottom: 3rem;
+      border-radius: 20px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.5s ease, box-shadow 0.9s ease;
+    }
+
+    header:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 560;
+    }
+
+    nav a {
+      margin-left: 1.7rem;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--text-light);
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .projects {
+      margin-top: 5rem;
+    }
+
+    .projects h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .project-card {
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: 0.9s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -80px;
+      width: 60px;
+      height: 100%;
+      background: rgba(180, 4, 4, 0.3);
+      transform: skewX(-25deg);
+      transition: 0.5s;
+    }
+
+    .project-card:hover::before {
+      left: 130%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+
+    .project-card p {
+      color: var(--text-light);
+      font-size: 1rem;
+    }
+
+    /* FORMULÁRIO DENTRO DO CARD */
+    .project-card form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .project-card form input,
+    .project-card form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: var(--text);
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    .project-card form input:focus,
+    .project-card form textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px rgba(108, 74, 242, 0.4);
+    }
+
+    .project-card form button.btn {
+      width: 100%;
+      padding: 0.9rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 10px;
+      background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .project-card form button.btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(108, 74, 242, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Dennys DEV</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="projetos.html">Projetos</a>
+      
+    </nav>
+  </header>
+
+  <!-- CONTATO -->
+  <section class="projects" id="contato">
+    <h3>Contato</h3>
+
+    <div class="project-grid">
+
+      <!-- CARD DE INFORMAÇÕES -->
+      <div class="project-card">
+        <h4>Meus Contatos</h4>
+        <p>Email: <strong>xxxxdennys@gmail.com</strong></p>
+        <p>Instagram: <strong>@dennys_ip</strong></p>
+        <p>Github: <strong>github.com/dennysjava</strong></p>
+        <p>Estou sempre aberto a ideias, sugestões e oportunidades!</p>
+      </div>
+
+      <!-- CARD DO FORMULÁRIO -->
+      <div class="project-card">
+        <h4>Enviar Mensagem</h4>
+        <form action="#" method="POST">
+          <input type="text" placeholder="Seu nome" required>
+          <input type="email" placeholder="Seu email" required>
+          <textarea rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
