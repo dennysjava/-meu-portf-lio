@@ -1,0 +1,48 @@
+/* ===========================
+   SEÇÃO SOBRE
+=========================== */
+
+#sobre {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-card {
+  max-width: 800px;
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 2px solid var(--border);
+
+  box-shadow: var(--shadow);
+  animation: fadeIn 0.8s ease-in-out;
+
+  transition: 0.4s ease;
+}
+
+.sobre-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.sobre-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+
+  background: linear-gradient(45deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.sobre-card p {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sobre-card strong {
+  color: var(--primary-dark);
+}
